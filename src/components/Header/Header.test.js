@@ -63,24 +63,28 @@ describe('testing',()=>{
 // In React Testing Library, the findBy function is used to asynchronously find an element within the DOM tree based on a specific query. 
 // It returns a promise that resolves when the element is found or rejects if the element is not found within the specified timeout.
 
-// test('example test', async () => {
-//     render(<Header title="My Header" />);
-//     const element = await screen.findByText(/My Header/i);
-//     expect(element).toBeInTheDocument()
-//     // Assertions or further actions with the found element
-//   });
+describe('Testing findBy',()=>{
+    test('example test', async () => {
+        render(<Header title="My Header" />);
+        const element = await screen.findByText(/My Header/i);
+        expect(element).toBeInTheDocument()
+        // Assertions or further actions with the found element
+      });
+})
 
 
   // queryBy
 //   In React Testing Library, the queryBy function is used to synchronously find an element within the DOM tree based on a specific query. 
 //   It returns the element if found or null if the element is not found.
 
-// test('should find by query', async () => {
-//     render(<Header title="My Header" />);
-//     const element = screen.queryByText(/My Header/i);
-//     expect(element).toBeInTheDocument()
-//     // Assertions or further actions with the found element
-//   });
+describe('Testing queryBy',()=>{
+    test('should find by query', async () => {
+        render(<Header title="My Header" />);
+        const element = screen.queryByText(/My Header/i);
+        expect(element).toBeInTheDocument()
+        // Assertions or further actions with the found element
+      });
+})
 
 //   test('should find by query', async () => {
 //     render(<Header title="My Header" />);
