@@ -22,3 +22,6 @@ getByTitle: Finds an element by its title attribute value.
 
 In React Testing Library, the findBy function is used to asynchronously find an element within the DOM tree based on a specific query. 
 It returns a promise that resolves when the element is found or rejects if the element is not found within the specified timeout.
+
+In React Testing Library, the getAllBy function is used to synchronously find multiple elements within the DOM tree based on a specific query. 
+It returns an array of elements that match the query.

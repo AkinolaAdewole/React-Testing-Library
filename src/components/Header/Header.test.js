@@ -54,8 +54,41 @@ test('should find element by data-testid', ()=>{
 // It returns a promise that resolves when the element is found or rejects if the element is not found within the specified timeout.
 
 test('example test', async () => {
-    render(<Header />);
-    const element = await screen.findByText('');
+    render(<Header title="My Header" />);
+    const element = await screen.findByText(/My Header/i);
     expect(element).toBeInTheDocument()
+    // Assertions or further actions with the found element
+  });
+
+
+  // queryBy
+//   In React Testing Library, the queryBy function is used to synchronously find an element within the DOM tree based on a specific query. 
+//   It returns the element if found or null if the element is not found.
+
+test('should find by query', async () => {
+    render(<Header title="My Header" />);
+    const element = screen.queryByText(/My Header/i);
+    expect(element).toBeInTheDocument()
+    // Assertions or further actions with the found element
+  });
+
+  test('should find by query', async () => {
+    render(<Header title="My Header" />);
+    const element = screen.queryByText(/dog/i);
+    expect(element).not.toBeInTheDocument()
+    // Assertions or further actions with the found element
+  });
+
+
+
+
+  //getAllBy
+
+// In React Testing Library, the getAllBy function is used to synchronously find multiple elements within the DOM tree based on a specific query. 
+// It returns an array of elements that match the query.
+  test('should find by getAllBy', async () => {
+    render(<Header title="My Header" />);
+    const element = screen.getAllByRole('heading');
+    expect(element.length).toBe(3)
     // Assertions or further actions with the found element
   });
