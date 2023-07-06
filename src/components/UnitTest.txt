@@ -1,3 +1,17 @@
 Unit Tests: Unit tests focus on testing individual units of code in isolation, typically at the function or component level. 
 In React, this involves testing the behavior and output of components, their methods, or utility functions. 
 Unit tests verify that these units of code work as expected, with specific inputs and outputs, without relying on external dependencies.
+
+
+
+In React Testing Library, the getBy queries are used to find elements in the rendered component based on their attributes, text content, or roles.
+ The getBy queries throw an error if no matching element is found.
+
+Here are some commonly used getBy queries in React Testing Library:
+
+getByLabelText: Finds an element by its associated <label> text or aria-label attribute.
+getByPlaceholderText: Finds an element by its placeholder attribute value.
+getByRole: Finds an element by its ARIA role.(name attribute)
+getByTestId: Finds an element by a custom data-testid attribute.
+getByText: Finds an element by its visible text content.
+getByTitle: Finds an element by its title attribute value.
