@@ -15,3 +15,10 @@ getByRole: Finds an element by its ARIA role.(name attribute)
 getByTestId: Finds an element by a custom data-testid attribute.
 getByText: Finds an element by its visible text content.
 getByTitle: Finds an element by its title attribute value.
+
+
+
+
+
+In React Testing Library, the findBy function is used to asynchronously find an element within the DOM tree based on a specific query. 
+It returns a promise that resolves when the element is found or rejects if the element is not found within the specified timeout.
