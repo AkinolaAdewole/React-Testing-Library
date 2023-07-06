@@ -28,7 +28,7 @@ function AddInput({
                 className="input" 
                 value={todo} 
                 onChange={(e) => setTodo(e.target.value)}
-                placeholder="Add a new task here..."
+                placeholder="Add a new task here ..."
             />
             <button 
                 className="add-btn"
