@@ -9,7 +9,7 @@ describe('Add Input',()=>{
         render(<AddInput 
             todos={[]}
             setTodos={mockSetTodo} />)
-        const headingElement= screen.getByPlaceHolderText(/Add a new task here .../i)
+        const headingElement= screen.getByPlaceholderText(/Add a new task here .../i)
         expect(headingElement).toBeInTheDocument();
     })
 
@@ -18,9 +18,9 @@ describe('Add Input',()=>{
         render(<AddInput 
             todos={[]}
             setTodos={mockSetTodo} />)
-        const headingElement= screen.getByPlaceHolderText(/Add a new task here .../i)
-        fireEvent.change(inputElement, {value:"Go Grocery Shopping"})
-        expect(headingElement.value).toBe("Go Grocery Shopping");
+        const inputElement= screen.getByPlaceholderText(/Add a new task here .../i)
+        fireEvent.change(inputElement, {target:{value:"Go Grocery Shopping"}})
+        expect(inputElement.value).toBe("Go Grocery Shopping");
     })
     
 })
